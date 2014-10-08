@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html ng-app="coverLetter">
+<head>
+  <script src="angular.js"></script>
+  <script src="moment-with-langs.js"></script>
+  <script src="cover-letter.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet' type='text/css'>
+</head>
+<body ng-controller="mainCtrl">
+  <form class="no-print letter">
+    <h1>Fill Me In!</h1>
+
+<!--     <div>Contact Person:</div>
+    <input type="text" ng-model="contact_name">
+    <div>Contact Person Title:</div>
+    <input type="text" ng-model="contact_title"> -->
+    <div>Position Title</div>
+    <input type="text" ng-model="position">
+    <div>Company Name:</div>
+    <input type="text" ng-model="company_name">
+    <div>Company Space:</div>
+    <input type="text" ng-model="company_space">
+    <div>Company Address:</div>
+    <input type="text" ng-model="company_address"> 
+    <div>Address Line Two:</div>
+    <input type="text" ng-model="company_address_two">
+
+    <!-- <div>Greeting:</div> -->
+    <!-- <input type="text" ng-model="greeting"> -->
+    <!-- <div>Intro Paragraph</div> -->
+    <!-- <textarea ng-model="intro"></textarea> -->
+    <div>Custom Sentence</div>
+    <textarea ng-model="middle"></textarea>
+    <!-- <div>End Paragraph</div> -->
+    <!-- <textarea ng-model="end"></textarea> -->
+  </form>
+  
+  <section class="content">
+    <header>
+      <h1 class="name">Zach <span class='last-name'>Chen<span></h1>
+      <ul class="contact">
+        <li>San Francisco, CA 94103</li>
+        <li>425-458-8027</li>
+        <li>
+          <a href="mailto:zachen717@gmail.com">zachen717@gmail.com</a>
+        </li>
+      </ul>
+    </header>
+    
+    <div class="date">
+      {{date}}
+    </div>
+    
+    <div>
+      <div class="contact-name">{{contact_name}}</div>
+      <div class="contact-title">{{contact_title}}</div>
+      <div class="company-name">{{company_name}}</div>
+      <div class="company-address">{{company_address}}</div>
+      <div class="company-address-two">{{company_address_two}}</div>
+    </div>
+    
+    <div>
+      Dear {{company_name}} team,
+    </div>
+    
+    <div class="letter-body">
+     &nbsp;&nbsp;&nbsp;&nbsp; I am a web developer with experience in Ruby on Rails and Javascript and a background in Electrical Engineering. I'm looking for opportunities with an interesting, fast paced company where my products can have an impact and I can see a project from start to finish. I'm also looking for a place where I can continue to learn each and every day so I can continue to grow as both an employee and as a web developer.
+    </div>
+    <div class="letter-body">
+     &nbsp;&nbsp;&nbsp;&nbsp; {{middle}} 
+    </div>
+    <div class="letter-body">
+     &nbsp;&nbsp;&nbsp;&nbsp;I am currently working on NomNomNow, which is similar to Yelp and built with Ruby on Rails as well as Backbone. NomNomNow is  my testing ground for the cool new tools and languages that I'm learning but I'm. You can check it out at www.nom-nom-now.net. I am solution oriented and enjoy learning how to use new tools to get a job done. More of my projects and code are on my portfolio page and github linked at the bottom. My resume is attached. I look forward to hearing back from you soon!
+    </div>
+    
+    <div class="ending">
+      -Zach Chen
+    </div>
+    
+    <footer>
+      <ul class="links">
+        <li>
+           <a href="http://www.zachchen.net"><strong>Personal Site</strong></a>
+        </li>
+        <span class="partition">|</span>
+        <li>
+           <a href="http://www.github.com/zchen717"><strong>Github</strong></a>
+        </li>
+        <span class="partition">|</span>
+        <li>
+           <a href="www.linkedin.com/pub/zach-chen/56/654/741/"><strong>LinkedIn</strong></a>
+        </li>
+      </ul>
+    </footer>
+</body>
+  
+  
+</html>
